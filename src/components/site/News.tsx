@@ -1,4 +1,7 @@
 import { Calendar, ArrowRight } from "lucide-react";
+import newsEmergency from "@/assets/news-emergency.jpg";
+import newsCharity from "@/assets/news-charity.jpg";
+import newsSurgery from "@/assets/news-surgery.jpg";
 
 const NEWS = [
   {
@@ -6,18 +9,21 @@ const NEWS = [
     title: "Cấp cứu thành công bệnh nhân ngừng tuần hoàn do sốc mất máu từ ổ loét lớn ở hành tá tràng",
     desc: "Một trường hợp xuất huyết tiêu hóa mức độ nặng đã được xử trí kịp thời nhờ sự phối hợp hiệu quả giữa các chuyên khoa.",
     date: "12/03/2025",
+    image: newsEmergency,
   },
   {
     tag: "Hoạt động",
     title: "Bệnh viện Quân y 105 tham dự Hội nghị An sinh Xã hội — trao tặng thẻ BHYT, sổ BHXH",
     desc: "Chung tay lan tỏa “Tết ấm” cho người có hoàn cảnh khó khăn trên địa bàn.",
     date: "28/01/2025",
+    image: newsCharity,
   },
   {
     tag: "Y học",
     title: "Kháng sinh dự phòng trong phẫu thuật — Phòng ngừa nhiễm trùng vết mổ (SSI)",
     desc: "Cập nhật phác đồ và khuyến cáo mới nhất từ các chuyên gia của Bệnh viện.",
     date: "05/12/2024",
+    image: newsSurgery,
   },
 ];
 
@@ -38,11 +44,17 @@ export function News() {
         <div className="mt-10 grid md:grid-cols-3 gap-6">
           {NEWS.map((n, i) => (
             <article key={i} className="group rounded-2xl overflow-hidden bg-card ring-1 ring-border hover:shadow-card hover:-translate-y-1 transition-all">
-              <div className="aspect-[16/10] relative overflow-hidden" style={{ background: "var(--gradient-primary)" }}>
-                <div className="absolute inset-0 flex items-center justify-center text-primary-foreground/30 text-7xl font-bold">
-                  105
-                </div>
-                <span className="absolute top-3 left-3 bg-accent text-accent-foreground text-xs font-bold uppercase px-3 py-1 rounded-full">
+              <div className="aspect-[16/10] relative overflow-hidden bg-muted">
+                <img
+                  src={n.image}
+                  alt={n.title}
+                  loading="lazy"
+                  width={800}
+                  height={512}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                <span className="absolute top-3 left-3 bg-accent text-accent-foreground text-xs font-bold uppercase px-3 py-1 rounded-full shadow-soft">
                   {n.tag}
                 </span>
               </div>
