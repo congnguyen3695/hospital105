@@ -26,19 +26,19 @@ const ITEMS = [
 
 export function WhyUs() {
   return (
-    <section className="py-16 md:py-20 relative overflow-hidden">
+    <section className="py-16 md:py-20 relative overflow-hidden bg-primary">
       <div className="absolute inset-0 -z-10">
         <img src={equipImg} alt="" className="h-full w-full object-cover" loading="lazy" />
-        <div className="absolute inset-0" style={{ background: "var(--gradient-primary)", opacity: 0.95 }} />
+        <div className="absolute inset-0" style={{ background: "var(--gradient-primary)", opacity: 0.96 }} />
       </div>
 
-      <div className="container mx-auto px-4 text-primary-foreground">
+      <div className="container mx-auto px-4 relative z-10 text-white">
         <div className="text-center max-w-2xl mx-auto">
           <span className="text-sm font-semibold text-gold uppercase tracking-wider">Lý do nên chọn chúng tôi</span>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold">
+          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white">
             Tận tâm vì sức khỏe người bệnh
           </h2>
-          <p className="mt-4 text-white/80">
+          <p className="mt-4 text-white/85">
             Với danh mục khám và điều trị đa dạng, đội ngũ y bác sĩ luôn nỗ lực mang lại sức khỏe và
             sự an tâm tuyệt đối cho mỗi bệnh nhân.
           </p>
