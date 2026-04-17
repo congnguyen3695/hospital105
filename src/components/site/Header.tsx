@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, ChevronDown, CalendarPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo105 from "@/assets/logo-105.png";
 
 const NAV = [
   { label: "Trang chủ", href: "/" },
@@ -37,9 +38,14 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border shadow-sm">
       <div className="container mx-auto px-4 flex items-center justify-between gap-4 py-3">
         <Link to="/" className="flex items-center gap-3 shrink-0">
-          <div className="h-12 w-12 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-soft">
-            <span className="text-primary-foreground font-bold text-lg">105</span>
-          </div>
+          <img
+            src={logo105}
+            alt="Logo Bệnh viện Quân y 105"
+            width={48}
+            height={48}
+            className="h-12 w-12 object-contain shrink-0"
+          />
+          <div className="hidden sm:block">
           <div className="leading-tight">
             <div className="text-[11px] uppercase tracking-wider text-muted-foreground">Tổng cục Hậu cần</div>
             <div className="text-base md:text-lg font-bold text-primary-dark">
