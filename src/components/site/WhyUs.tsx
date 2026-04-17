@@ -48,12 +48,12 @@ export function WhyUs() {
           {ITEMS.map((it) => (
             <div
               key={it.title}
-              className="group p-6 rounded-2xl bg-white/8 backdrop-blur-sm ring-1 ring-white/15 hover:bg-white hover:text-foreground transition-all hover:-translate-y-1 hover:shadow-glow"
+              className="group p-6 rounded-2xl bg-white/10 backdrop-blur-sm ring-1 ring-white/20 hover:bg-white transition-all hover:-translate-y-1 hover:shadow-glow"
             >
-              <div className="h-14 w-14 rounded-xl bg-gold/20 text-gold group-hover:bg-accent group-hover:text-accent-foreground flex items-center justify-center transition-colors">
+              <div className="h-14 w-14 rounded-xl bg-gold/25 text-gold group-hover:bg-accent group-hover:text-accent-foreground flex items-center justify-center transition-colors">
                 <it.icon className="h-7 w-7" />
               </div>
-              <h3 className="mt-4 text-lg font-bold">{it.title}</h3>
+              <h3 className="mt-4 text-lg font-bold text-white group-hover:text-foreground">{it.title}</h3>
               <p className="mt-2 text-sm text-white/80 group-hover:text-muted-foreground">{it.desc}</p>
             </div>
           ))}
