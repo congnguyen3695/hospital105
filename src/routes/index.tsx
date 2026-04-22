@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Helmet } from "react-helmet-async";
 import { Toaster } from "@/components/ui/sonner";
 import { TopBar } from "@/components/site/TopBar";
 import { Header } from "@/components/site/Header";
@@ -19,18 +18,6 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Bệnh viện Quân y 105 — Niềm tin của người bệnh</title>
-        <meta
-          name="description"
-          content="Bệnh viện Quân y 105. Khám chữa bệnh chất lượng cao, đội ngũ bác sĩ chuyên gia, trang thiết bị y tế hiện đại tại Sơn Tây, Hà Nội."
-        />
-        <meta property="og:title" content="Bệnh viện Quân y 105 — Niềm tin của người bệnh" />
-        <meta
-          property="og:description"
-          content="Khám chữa bệnh chất lượng cao tại Sơn Tây, Hà Nội."
-        />
-      </Helmet>
       <TopBar />
       <Header />
       <main>
