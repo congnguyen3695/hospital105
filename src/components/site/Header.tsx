@@ -46,7 +46,6 @@ export function Header() {
             className="h-12 w-12 object-contain shrink-0"
           />
           <div className="hidden sm:block leading-tight">
-            <div className="text-[11px] uppercase tracking-wider text-muted-foreground">Tổng cục Hậu cần</div>
             <div className="text-base md:text-lg font-bold text-primary-dark">
               Bệnh viện Quân y 105
             </div>
