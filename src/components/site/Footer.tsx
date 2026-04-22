@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Youtube } from "lucide-react";
+import logo105 from "@/assets/logo-105.png";
 
 export function Footer() {
   return (
@@ -6,11 +7,14 @@ export function Footer() {
       <div className="container mx-auto px-4 py-14 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
           <div className="flex items-center gap-3">
-            <div className="h-12 w-12 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center font-bold">
-              105
-            </div>
+            <img
+              src={logo105}
+              alt="Logo Bệnh viện Quân y 105"
+              width={48}
+              height={48}
+              className="h-12 w-12 object-contain shrink-0"
+            />
             <div>
-              <div className="text-xs uppercase text-white/60 tracking-wider">Tổng cục Hậu cần</div>
               <div className="font-bold">Bệnh viện Quân y 105</div>
             </div>
           </div>
