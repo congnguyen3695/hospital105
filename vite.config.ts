@@ -21,6 +21,11 @@ export default defineConfig({
     port: 8080,
     strictPort: false,
   },
+  preview: {
+    host: "::",
+    port: 8080,
+    allowedHosts: true,
+  },
   build: {
     outDir: "dist",
   },
