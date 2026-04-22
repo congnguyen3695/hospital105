@@ -1,5 +1,4 @@
 import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
-import { Helmet } from "react-helmet-async";
 
 function NotFoundComponent() {
   return (
@@ -24,18 +23,7 @@ function NotFoundComponent() {
 }
 
 function RootComponent() {
-  return (
-    <>
-      <Helmet>
-        <title>Bệnh viện Quân y 105 — Niềm tin của người bệnh</title>
-        <meta
-          name="description"
-          content="Bệnh viện Quân y 105. Khám chữa bệnh chất lượng cao, đội ngũ bác sĩ chuyên gia, trang thiết bị y tế hiện đại tại Sơn Tây, Hà Nội."
-        />
-      </Helmet>
-      <Outlet />
-    </>
-  );
+  return <Outlet />;
 }
 
 export const Route = createRootRoute({
