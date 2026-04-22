@@ -1,7 +1,5 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
-import logo105 from "../assets/logo-105.png?url";
+import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
+import { Helmet } from "react-helmet-async";
 
 function NotFoundComponent() {
   return (
@@ -25,59 +23,22 @@ function NotFoundComponent() {
   );
 }
 
-export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "A website clone of Benhvienquany105.vn, featuring a comprehensive homepage with key hospital information and services." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "A website clone of Benhvienquany105.vn, featuring a comprehensive homepage with key hospital information and services." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "A website clone of Benhvienquany105.vn, featuring a comprehensive homepage with key hospital information and services." },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      {
-        rel: "icon",
-        type: "image/png",
-        href: logo105,
-      },
-    ],
-    scripts: [
-      {
-        src: "/cake-chatbot.js",
-        defer: true,
-      },
-    ],
-  }),
-  shellComponent: RootShell,
-  component: RootComponent,
-  notFoundComponent: NotFoundComponent,
-});
-
-function RootShell({ children }: { children: React.ReactNode }) {
+function RootComponent() {
   return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
+    <>
+      <Helmet>
+        <title>Bệnh viện Quân y 105 — Niềm tin của người bệnh</title>
+        <meta
+          name="description"
+          content="Bệnh viện Quân y 105. Khám chữa bệnh chất lượng cao, đội ngũ bác sĩ chuyên gia, trang thiết bị y tế hiện đại tại Sơn Tây, Hà Nội."
+        />
+      </Helmet>
+      <Outlet />
+    </>
   );
 }
 
-function RootComponent() {
-  return <Outlet />;
-}
+export const Route = createRootRoute({
+  component: RootComponent,
+  notFoundComponent: NotFoundComponent,
+});
