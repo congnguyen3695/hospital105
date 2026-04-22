@@ -20,7 +20,7 @@ export function Hero() {
         <div className="max-w-3xl text-primary-foreground">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 text-xs font-semibold uppercase tracking-wider ring-1 ring-white/20">
             <ShieldCheck className="h-3.5 w-3.5 text-gold" />
-            Tổng cục Hậu cần — Bộ Quốc phòng
+            Bệnh viện Quân y 105
           </span>
           <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Bệnh viện Quân y 105

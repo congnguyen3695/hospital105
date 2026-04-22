@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Bệnh viện Quân y 105 - Tổng cục Hậu cần. Khám chữa bệnh chất lượng cao, đội ngũ bác sĩ chuyên gia, trang thiết bị y tế hiện đại tại Sơn Tây, Hà Nội.",
+          "Bệnh viện Quân y 105. Khám chữa bệnh chất lượng cao, đội ngũ bác sĩ chuyên gia, trang thiết bị y tế hiện đại tại Sơn Tây, Hà Nội.",
       },
       { property: "og:title", content: "Bệnh viện Quân y 105 — Niềm tin của người bệnh" },
       { property: "og:description", content: "Khám chữa bệnh chất lượng cao tại Sơn Tây, Hà Nội." },
