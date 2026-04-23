@@ -13,5 +13,5 @@
   fjs.parentNode.insertBefore(js, fjs);
 })(window, document, "script", "CakeAIChatbotApp", "https://chatbot.84soft.vn/index.min.js");
 window.CakeAIChatbotApp("init", {
-  token: "0d486d34-6f00-4326-8aae-e4e5c6e19764",
+  token: "02590788-425f-4558-afb9-37d4a20e99a5",
 });
